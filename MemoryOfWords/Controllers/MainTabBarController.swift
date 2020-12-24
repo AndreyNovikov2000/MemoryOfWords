@@ -19,7 +19,7 @@ class MainTabBarController: UITabBarController {
     private lazy var comliteVC: ComplitedViewController = .loadFromStoryboard()
     private lazy var formattedComliteVC = generateViewController(withRootViewController: comliteVC,
                                                             navigationTitile: NSLocalizedString("Үйренген сөздер", comment: ""),
-                                                            tabBarImage: UIImage(systemName: "person.crop.circle.fill"))
+                                                            tabBarImage: UIImage(systemName: "doc"))
     
     private lazy var historyVC: HistoryViewController = .loadFromStoryboard()
     private lazy var formattedHistoryVC = generateViewController(withRootViewController: historyVC,

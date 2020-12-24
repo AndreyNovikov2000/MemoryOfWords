@@ -43,7 +43,7 @@ class SignInViewController: UIViewController {
     private let capsuleView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
-        view.backgroundColor = K.Colors.backgroundMainRed
+        view.backgroundColor = K.AuthColors.red
         view.layer.masksToBounds = true
         view.layer.cornerRadius = 10
         return view
@@ -86,7 +86,7 @@ class SignInViewController: UIViewController {
         
         setupLoginView()
         
-        view.backgroundColor = K.Colors.mainRed
+        view.backgroundColor = .white
     }
     
     

@@ -30,7 +30,7 @@ class ProfileViewController: UIViewController {
             button.setImage(UIImage(named: "plus_photo"), for: .normal)
         }
         
-        button.tintColor = .clear
+        button.tintColor = .black
         button.addTarget(self, action: #selector(handleAddButtonPressed), for: .touchUpInside)
         button.layer.masksToBounds = true
         button.clipsToBounds = true
