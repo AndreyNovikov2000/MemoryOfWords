@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController restorationIdentifier="LoginViewController" storyboardIdentifier="LoginViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <segue destination="BmX-K7-6L8" kind="show" identifier="sighin" id="eYd-dR-URK"/>
+                        <segue destination="wVz-BF-KPE" kind="presentation" identifier="login" modalPresentationStyle="fullScreen" id="Bqh-y7-GVu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="119"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="JkZ-9s-gf7">
+            <objects>
+                <viewController storyboardIdentifier="ComplitedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Gil-Bv-XJK" customClass="ComplitedViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BOl-u6-KRi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a2G-Av-LQn">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ilX-u1-Z1J">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordCell" id="Sgv-62-nB0" customClass="WordCell" customModule="MemoryOfWords" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="0l4-np-dzS">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="Gil-Bv-XJK" id="ifm-Ql-nEX"/>
+                                    <outlet property="delegate" destination="Gil-Bv-XJK" id="WUA-kW-lPR"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="h6H-Wd-snd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="a2G-Av-LQn" firstAttribute="leading" secondItem="h6H-Wd-snd" secondAttribute="leading" id="C6N-j7-q84"/>
+                            <constraint firstItem="h6H-Wd-snd" firstAttribute="bottom" secondItem="a2G-Av-LQn" secondAttribute="bottom" id="EVt-BR-OcW"/>
+                            <constraint firstItem="a2G-Av-LQn" firstAttribute="top" secondItem="h6H-Wd-snd" secondAttribute="top" id="EyJ-ly-cKd"/>
+                            <constraint firstItem="h6H-Wd-snd" firstAttribute="trailing" secondItem="a2G-Av-LQn" secondAttribute="trailing" id="lkX-Si-NO5"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="gcQ-CS-qe2"/>
+                    <connections>
+                        <outlet property="collectionView" destination="a2G-Av-LQn" id="Beb-2H-jZH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vti-jD-JrK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925" y="392"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="qh1-Yj-sJq">
+            <objects>
+                <viewController restorationIdentifier="HistoryViewController" storyboardIdentifier="HistoryViewController" id="I3K-Bm-yso" customClass="HistoryViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GZA-ZZ-ucZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-rU-LSO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="HistoryCell" editingAccessoryType="disclosureIndicator" id="ttF-KI-c2k" customClass="HistoryCell" customModule="MemoryOfWords" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ttF-KI-c2k" id="X4U-2P-Ol9">
+                                            <rect key="frame" x="0.0" y="0.0" width="383" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="IvR-DR-Ofo" kind="show" id="70Y-h0-1cc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="I3K-Bm-yso" id="ASV-84-Lod"/>
+                                    <outlet property="delegate" destination="I3K-Bm-yso" id="Bgh-uo-3ny"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ORM-SJ-W9a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ORM-SJ-W9a" firstAttribute="trailing" secondItem="zxz-rU-LSO" secondAttribute="trailing" id="d6G-xe-oZ4"/>
+                            <constraint firstItem="zxz-rU-LSO" firstAttribute="leading" secondItem="ORM-SJ-W9a" secondAttribute="leading" id="mg1-1o-rsW"/>
+                            <constraint firstItem="zxz-rU-LSO" firstAttribute="top" secondItem="ORM-SJ-W9a" secondAttribute="top" id="mkN-jE-kNC"/>
+                            <constraint firstItem="ORM-SJ-W9a" firstAttribute="bottom" secondItem="zxz-rU-LSO" secondAttribute="bottom" id="rNh-i6-oDn"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="QTb-oV-3TJ"/>
+                    <connections>
+                        <outlet property="tableView" destination="zxz-rU-LSO" id="FQ9-bt-Qjt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X31-0S-uA3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="1275"/>
+        </scene>
+        <!--History Description View Controller-->
+        <scene sceneID="CWz-cq-BrQ">
+            <objects>
+                <viewController id="IvR-DR-Ofo" customClass="HistoryDescriptionViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q6s-Ps-LGG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ehG-zY-iDO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="b5J-Re-gMx"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ehG-zY-iDO" firstAttribute="leading" secondItem="b5J-Re-gMx" secondAttribute="leading" id="4Mz-B5-CpZ"/>
+                            <constraint firstItem="b5J-Re-gMx" firstAttribute="bottom" secondItem="ehG-zY-iDO" secondAttribute="bottom" id="Ika-6w-Y4h"/>
+                            <constraint firstItem="b5J-Re-gMx" firstAttribute="trailing" secondItem="ehG-zY-iDO" secondAttribute="trailing" id="hTR-Wg-572"/>
+                            <constraint firstItem="ehG-zY-iDO" firstAttribute="top" secondItem="b5J-Re-gMx" secondAttribute="top" id="qMq-E4-mfR"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ZxC-DQ-VRv"/>
+                    <connections>
+                        <outlet property="textView" destination="ehG-zY-iDO" id="DdY-br-1Iu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zf2-Bb-o51" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2809" y="1275"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="L1Z-9a-gaE">
+            <objects>
+                <viewController storyboardIdentifier="WordsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vYc-Fr-jsA" customClass="WordsViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="O6L-OL-1mW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rkc-Dz-yNi">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="hi5-bt-YD0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="WordCell" id="BQb-JS-FRo" customClass="WordCell" customModule="MemoryOfWords" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="tMk-Td-Brh">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="vYc-Fr-jsA" id="7Mc-jv-r9Q"/>
+                                    <outlet property="delegate" destination="vYc-Fr-jsA" id="I7a-3u-jV7"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YGh-g0-pmt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Rkc-Dz-yNi" firstAttribute="leading" secondItem="YGh-g0-pmt" secondAttribute="leading" id="MQW-3n-faS"/>
+                            <constraint firstItem="YGh-g0-pmt" firstAttribute="trailing" secondItem="Rkc-Dz-yNi" secondAttribute="trailing" id="QBo-Rx-AKt"/>
+                            <constraint firstItem="YGh-g0-pmt" firstAttribute="bottom" secondItem="Rkc-Dz-yNi" secondAttribute="bottom" id="WPJ-fz-Pri"/>
+                            <constraint firstItem="Rkc-Dz-yNi" firstAttribute="top" secondItem="YGh-g0-pmt" secondAttribute="top" id="yDp-C1-bc6"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="kLz-VA-qK0"/>
+                    <connections>
+                        <outlet property="wordCollectionView" destination="Rkc-Dz-yNi" id="ev1-bB-7hr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kso-Jz-JjO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2925" y="-313"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Ea6-g2-j5l">
+            <objects>
+                <viewController restorationIdentifier="ProfileViewController" storyboardIdentifier="ProfileViewController" id="zzG-xD-9MW" customClass="ProfileViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EkJ-lN-Z76">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="42m-LY-8mG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Exl-RW-Z6V"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybZ-EH-ew8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4177" y="119"/>
+        </scene>
+        <!--Main Tab Bar Controller-->
+        <scene sceneID="Hxo-pg-oGQ">
+            <objects>
+                <tabBarController restorationIdentifier="MainTabBarController" storyboardIdentifier="MainTabBarController" id="wVz-BF-KPE" customClass="MainTabBarController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6u2-6V-86X"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uy7-c3-gkQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="vYc-Fr-jsA" kind="relationship" relationship="viewControllers" id="FnK-AZ-fTz"/>
+                        <segue destination="Gil-Bv-XJK" kind="relationship" relationship="viewControllers" id="NeC-cO-KiJ"/>
+                        <segue destination="I3K-Bm-yso" kind="relationship" relationship="viewControllers" id="sLf-tv-R52"/>
+                        <segue destination="zzG-xD-9MW" kind="relationship" relationship="viewControllers" id="tcZ-pN-f4h"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x7p-Fi-DWg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2006" y="119"/>
+        </scene>
+        <!--Sign In View Controller-->
+        <scene sceneID="kHR-Ws-f7A">
+            <objects>
+                <viewController restorationIdentifier="SignInViewController" storyboardIdentifier="SignInViewController" id="BmX-K7-6L8" customClass="SignInViewController" customModule="MemoryOfWords" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tma-iN-Cds">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="F4m-3t-3at"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="A3o-sZ-44I"/>
+                    <connections>
+                        <segue destination="wVz-BF-KPE" kind="presentation" identifier="id" modalPresentationStyle="fullScreen" id="PJy-af-e2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xrT-QV-dnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138" y="889"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="PJy-af-e2O"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
